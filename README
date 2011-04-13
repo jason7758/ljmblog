@@ -1,0 +1,13 @@
+=== ljmblog 帮助文档 ====
+
+**** 版权声明 **** 
+
+Copyright (c) 2010, jason <jason7758@gmail.com>.
+ljmblog基于GNU General Public License, version 2.0 发布(http://www.gnu.org/licenses/gpl-2.0.html).
+
+**** 关于ljmblog *****
+
+limblog 对针对微薄开发所用的框架，本人对微薄的接口进行封装，这样使的开发者，可以只开发一套程序就可以运行于各微薄平台。
+**** 程序开发与支持 ****
+
+项目主页 https://github.com/jason7758/ljmblog：

@@ -1,0 +1,17 @@
+<?php
+
+include_once( '../../common.php' );
+
+$target = $_POST['target'];
+$app_key = $_POST['akey'];
+$app_secret = $_POST['skey'];
+$callback = $_POST['callback'];
+
+/*$target = 'qq';
+$app_key = '1f3753ef450043dc8d76776a854af1a8';
+$app_secret = 'cfa2cd474ce1d4b6fe7314004c43b96b';
+$callback = 'http://t.house.sina.com.cn/mblog/demo/callback.php';*/
+$result = get_request_token($target, $app_key , $app_secret, $callback);
+echo json_encode(array('errno'=>1,'errmsg'=>'成功','result'=>$result));
+
+

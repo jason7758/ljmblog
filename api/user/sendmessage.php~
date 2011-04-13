@@ -1,0 +1,9 @@
+<?php 
+/**
+ * 发送消息
+ * @param array $info
+ * @param int $info['uid'] 发送人用户ID
+ * @param string $info['fuids'] 接收人用户ID
+ * @param string $info['content'] 消息内容
+ * @param string $info['appname'] 消息来自哪个应用
+ */       

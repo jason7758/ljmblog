@@ -1,0 +1,13 @@
+<?php
+
+include_once( '../../common.php' );
+//$_POST = array ( 'target' => 'qq', 'akey' => '1f3753ef450043dc8d76776a854af1a8', 'skey' => 'cfa2cd474ce1d4b6fe7314004c43b96b', 'request_token' => '54e3f835d128407aa2d77392334e0ee1', 'request_secret' => '649f01afcf7ad657a23a11947dd39edb', 'oauth_verifier' => '477998', );
+$target = $_POST['target'];
+$app_key = $_POST['akey'];
+$app_secret = $_POST['skey'];
+$request_token = $_POST['request_token'];
+$request_secret = $_POST['request_secret'];
+
+$result = get_access_token($target, $app_key , $app_secret, $request_token, $request_secret);
+
+echo json_encode(array('errno'=>1,'errmsg'=>'成功','result'=>$result));

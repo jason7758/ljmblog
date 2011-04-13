@@ -1,0 +1,25 @@
+<?php 
+
+$trans_table = array(
+    'small_pic'=>'thumbnail',
+    'middle_pic'=>'bmiddle_pic',
+    'profile_image_url'=>'portrait',
+);
+function trans_fields($arr)
+{
+    if(!is_array($arr)) return $arr;
+    $new_arr = array(); 
+    global $trans_table;
+    foreach($arr as $key=>$val)
+    {
+        if(isset($trans_table[$key]))
+        {
+            $new_arr[$trans_table[$key]] =  trans_fields($val);       
+        }
+        else 
+        {
+            $new_arr[$key] =  trans_fields($val);       
+        }        
+    }
+    return $new_arr;
+}
